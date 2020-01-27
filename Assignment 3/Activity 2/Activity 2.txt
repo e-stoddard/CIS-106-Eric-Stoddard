@@ -1,0 +1,18 @@
+// This program converts the users age in years to the users age in months, weeks, days, hours, minutes and seconds.
+Declare Integer years
+Declare Integer months
+Declare Integer weeks
+Declare Integer days
+Declare Integer hours
+Declare Integer minutes
+Declare Integer seconds
+
+Display "Enter age in years"
+Input years
+Set months = years * 12
+Set weeks = years * 52
+Set days = years * 365
+Set hours = years * 365 * 24
+Set minutes = years * 365 * 24 * 60
+Set seconds = years * 365 * 24 * 60 * 60
+Display years, " years old is equal to being; ", months, " months old, ", weeks, " weeks old, ", days, " days old, ", hours, " hours old, ", minutes, " minutes old, ", seconds, " seconds old, "

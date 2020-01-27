@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ryan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-26 06:33:48 PM"/>
+        <attribute name="created" value="UnlhbjtFUklDLVBDOzIwMjAtMDEtMjY7MDY6MDg6MzMgUE07MjE3MA=="/>
+        <attribute name="edited" value="UnlhbjtFUklDLVBDOzIwMjAtMDEtMjY7MDY6MzM6NDggUE07MjsyMjgz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program will calculate the floor coverage of a rectangular room in square yards from an input width in feet and an input length in feet. "/>
+            <declare name="widthFeet" type="Real" array="False" size=""/>
+            <declare name="lengthFeet" type="Real" array="False" size=""/>
+            <declare name="widthMeters" type="Real" array="False" size=""/>
+            <declare name="lengthMeters" type="Real" array="False" size=""/>
+            <declare name="squareYards" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter width of the room (in feet)&quot;" newline="True"/>
+            <input variable="widthFeet"/>
+            <output expression="&quot;Enter length of the room (in feet)&quot;" newline="True"/>
+            <input variable="lengthFeet"/>
+            <assign variable="widthMeters" expression="widthfeet / 3"/>
+            <assign variable="lengthMeters" expression="lengthFeet / 3"/>
+            <assign variable="squareYards" expression="widthMeters * lengthMeters"/>
+            <output expression="&quot;A rectangular room that is &quot; &amp; widthFeet &amp; &quot; ft. wide by &quot; &amp; lengthFeet &amp; &quot; ft. long will have &quot; &amp; squareYards &amp; &quot; square yards of floor coverage&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

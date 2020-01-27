@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ryan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-26 05:49:08 PM"/>
+        <attribute name="created" value="UnlhbjtFUklDLVBDOzIwMjAtMDEtMjY7MDU6MjQ6MTggUE07MjE3MA=="/>
+        <attribute name="edited" value="UnlhbjtFUklDLVBDOzIwMjAtMDEtMjY7MDU6NDk6MDggUE07MjsyMjg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program converts the users age in years to the users age in months, weeks, days, hours, minutes and seconds. "/>
+            <declare name="years" type="Integer" array="False" size=""/>
+            <declare name="months" type="Integer" array="False" size=""/>
+            <declare name="weeks" type="Integer" array="False" size=""/>
+            <declare name="days" type="Integer" array="False" size=""/>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <declare name="minutes" type="Integer" array="False" size=""/>
+            <declare name="seconds" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter age in years&quot;" newline="True"/>
+            <input variable="years"/>
+            <assign variable="months" expression="years * 12"/>
+            <assign variable="weeks" expression="years * 52"/>
+            <assign variable="days" expression="years * 365"/>
+            <assign variable="hours" expression="years * 365 * 24"/>
+            <assign variable="minutes" expression="years * 365 * 24 * 60"/>
+            <assign variable="seconds" expression="years * 365 * 24 * 60 * 60"/>
+            <output expression="years &amp; &quot; years old is equal to being; &quot; &amp; months &amp; &quot; months old, &quot; &amp; weeks &amp; &quot; weeks old, &quot; &amp; days &amp; &quot; days old, &quot; &amp; hours &amp; &quot; hours old, &quot; &amp; minutes &amp; &quot; minutes old, &quot; &amp; seconds &amp; &quot; seconds old, &quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

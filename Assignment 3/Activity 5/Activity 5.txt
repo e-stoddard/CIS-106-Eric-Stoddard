@@ -1,0 +1,15 @@
+// This program will calculate the floor coverage of a rectangular room in square yards from an input width in feet and an input length in feet.
+Declare Real widthFeet
+Declare Real lengthFeet
+Declare Real widthMeters
+Declare Real lengthMeters
+Declare Real squareYards
+
+Display "Enter width of the room (in feet)"
+Input widthFeet
+Display "Enter length of the room (in feet)"
+Input lengthFeet
+Set widthMeters = widthFeet / 3
+Set lengthMeters = lengthFeet / 3
+Set squareYards = widthMeters * lengthMeters
+Display "A rectangular room that is ", widthFeet, " ft. wide by ", lengthFeet, " ft. long will have ", squareYards, " square yards of floor coverage"

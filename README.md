@@ -14,4 +14,4 @@ In this assignment I learned a lot about variables and data types. For variables
 
 ## Assignment 4
 
-In this assignment I was able to code my first program without the help of Flowgorithm. Using only the textbook as reference I was able to write a program that converts miles into yards, feet and inches. I was also able to successfully debug my program using Thonny's built in debugger. This is a good fist step for me and gives me confidence to start confidence to start coding more difficult programs. 
+In this assignment I was able to code my first program without the help of Flowgorithm. Using only the textbook as reference I was able to write a program that converts miles into yards, feet and inches. I was also able to successfully debug my program using Thonny's built in debugger. This is a good first step for me and gives me confidence to start confidence to start coding more difficult programs. 

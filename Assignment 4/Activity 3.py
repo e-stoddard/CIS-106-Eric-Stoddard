@@ -1,6 +1,7 @@
-#This program will convert a distance in miles to the equivalent distance in yards, feet and inches
+# This program will convert a distance in miles to the equivalent
+# distance in yards, feet and inches
 
-print ("Enter distance in miles")
+print("Enter distance in miles")
 miles = int(input())
 
 yards = miles * 1760
@@ -11,4 +12,3 @@ print(str(miles) + " miles in equivalent to " +
       str(yards) + " yards, " +
       str(feet) + " feet, " +
       str(inches) + " inches")
-

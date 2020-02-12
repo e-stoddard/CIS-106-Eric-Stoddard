@@ -1,0 +1,50 @@
+Function Main
+    ... This program will take a persons age in years and calculate a persons age in months, days, hours and seconds
+    Declare Real YearsOld
+    Declare Real MonthsOld
+    Declare Real DaysOld
+    Declare Real HoursOld
+    Declare Real SecondsOld
+    
+    Assign YearsOld = GetYearsOld()
+    Assign MonthsOld = CalculateMonthsOld(YearsOld)
+    Assign DaysOld = CalculateDaysOld(YearsOld)
+    Assign HoursOld = CalculateHoursOld(DaysOld)
+    Assign SecondsOld = CalculateSecondsOld(HoursOld)
+    Call DisplayResult(YearsOld, MonthsOld, DaysOld, HoursOld, SecondsOld)
+End
+
+Function CalculateDaysOld (Real YearsOld)
+    Declare Real DaysOld
+    
+    Assign DaysOld = YearsOld * 365
+Return Real DaysOld
+
+Function CalculateHoursOld (Real DaysOld)
+    Declare Real HoursOld
+    
+    Assign HoursOld = DaysOld * 24
+Return Real HoursOld
+
+Function CalculateMonthsOld (Real YearsOld)
+    Declare Real MonthsOld
+    
+    Assign MonthsOld = YearsOld * 12
+Return Real MonthsOld
+
+Function CalculateSecondsOld (Real HoursOld)
+    Declare Real SecondsOld
+    
+    Assign SecondsOld = HoursOld * 3600
+Return Real SecondsOld
+
+Function DisplayResult (Real YearsOld, Real MonthsOld, Real DaysOld, Real HoursOld, Real SecondsOld)
+    Output "A person " & YearsOld & " years old is " & MonthsOld & " months old, " & DaysOld & " days old, " & HoursOld & " hours old and " & SecondsOld & " seconds old."
+End
+
+Function GetYearsOld
+    Declare Real YearsOld
+    
+    Output "Enter age in years"
+    Input YearsOld
+Return Real YearsOld

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ryan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-02-12 01:59:35 PM"/>
+        <attribute name="created" value="UnlhbjtFUklDLVBDOzIwMjAtMDItMTI7MDE6MjM6MDUgUE07MjE1Nw=="/>
+        <attribute name="edited" value="UnlhbjtFUklDLVBDOzIwMjAtMDItMTI7MDE6NTk6MzUgUE07MjsyMjc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program will take a persons age in years and calculate a persons age in months, days, hours and seconds"/>
+            <declare name="YearsOld" type="Real" array="False" size=""/>
+            <declare name="MonthsOld" type="Real" array="False" size=""/>
+            <declare name="DaysOld" type="Real" array="False" size=""/>
+            <declare name="HoursOld" type="Real" array="False" size=""/>
+            <declare name="SecondsOld" type="Real" array="False" size=""/>
+            <assign variable="YearsOld" expression="GetYearsOld()"/>
+            <assign variable="MonthsOld" expression="CalculateMonthsOld(YearsOld)"/>
+            <assign variable="DaysOld" expression="CalculateDaysOld(YearsOld)"/>
+            <assign variable="HoursOld" expression="CalculateHoursOld(DaysOld)"/>
+            <assign variable="SecondsOld" expression="CalculateSecondsOld(HoursOld)"/>
+            <call expression="DisplayResult(YearsOld, MonthsOld, DaysOld, HoursOld, SecondsOld)"/>
+        </body>
+    </function>
+    <function name="CalculateDaysOld" type="Real" variable="DaysOld">
+        <parameters>
+            <parameter name="YearsOld" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="DaysOld" type="Real" array="False" size=""/>
+            <assign variable="DaysOld" expression="YearsOld * 365"/>
+        </body>
+    </function>
+    <function name="CalculateHoursOld" type="Real" variable="HoursOld">
+        <parameters>
+            <parameter name="DaysOld" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="HoursOld" type="Real" array="False" size=""/>
+            <assign variable="HoursOld" expression="DaysOld * 24"/>
+        </body>
+    </function>
+    <function name="CalculateMonthsOld" type="Real" variable="MonthsOld">
+        <parameters>
+            <parameter name="YearsOld" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="MonthsOld" type="Real" array="False" size=""/>
+            <assign variable="MonthsOld" expression="YearsOld * 12"/>
+        </body>
+    </function>
+    <function name="CalculateSecondsOld" type="Real" variable="SecondsOld">
+        <parameters>
+            <parameter name="HoursOld" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="SecondsOld" type="Real" array="False" size=""/>
+            <assign variable="SecondsOld" expression="HoursOld * 3600"/>
+        </body>
+    </function>
+    <function name="DisplayResult" type="None" variable="">
+        <parameters>
+            <parameter name="YearsOld" type="Real" array="False"/>
+            <parameter name="MonthsOld" type="Real" array="False"/>
+            <parameter name="DaysOld" type="Real" array="False"/>
+            <parameter name="HoursOld" type="Real" array="False"/>
+            <parameter name="SecondsOld" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;A person &quot; &amp; YearsOld &amp; &quot; years old is &quot; &amp; MonthsOld &amp; &quot; months old, &quot; &amp; DaysOld &amp; &quot; days old, &quot; &amp; HoursOld &amp; &quot; hours old and &quot; &amp; SecondsOld &amp; &quot; seconds old.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="GetYearsOld" type="Real" variable="YearsOld">
+        <parameters/>
+        <body>
+            <declare name="YearsOld" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter age in years&quot;" newline="True"/>
+            <input variable="YearsOld"/>
+        </body>
+    </function>
+</flowgorithm>

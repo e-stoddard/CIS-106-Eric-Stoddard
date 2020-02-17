@@ -19,3 +19,7 @@ In this assignment I was able to code my first program without the help of Flowg
 ## Assignment 5
 
 In this assignment I learned how to use functions within a program. For activity 1 I used Flowgorithm to create the program and generate the corresponding pseudocode and Python code. This was helpful for me to see how each fucntion should be placed within the program. I chose to do an activity I have done before without the use of functions to see the difference they would make.
+
+## Assignment 6
+
+In this assignment I became much more comfortable using functions within my programs. I was able to code two programs in Python using functions without the help of Flowgorithm or any other resources. It also took me much less time than the programs I created in the previous assignment. Being comfortable using functions will definitly help me moving forward as I intend to use functions in every program I create moving forward. 

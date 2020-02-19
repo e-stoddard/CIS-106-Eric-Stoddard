@@ -1,5 +1,13 @@
+# This program will calculate yards, feet and inches from
+# an input distance in miles
+#
+# References:
+# https://en.wikiversity.org/wiki/Programming_Fundamentals/Functions
+# https://www.mathsisfun.com/measure/us-standard-length.html
+
+
 def get_miles():
-    print ("Enter distance in miles")
+    print("Enter distance in miles")
     miles = float(input())
     return miles
 
@@ -20,16 +28,17 @@ def calculate_inches(feet):
 
 
 def display_result(miles, yards, feet, inches):
-    print (str(miles) + " miles is equal to " + str(yards) +
+    print(str(miles) + " miles is equal to " + str(yards) +
            " yards, " + str(feet) + " feet and " +
            str(inches) + " inches.")
 
 
-# Main
-# This program will calculate yards, feet and inches from
-# an input distance in miles
-miles = get_miles()
-yards = calculate_yards(miles)
-feet = calculate_feet(yards)
-inches = calculate_inches(feet)
-display_result(miles, yards, feet, inches)
+def main():
+    miles = get_miles()
+    yards = calculate_yards(miles)
+    feet = calculate_feet(yards)
+    inches = calculate_inches(feet)
+    display_result(miles, yards, feet, inches)
+
+
+main()

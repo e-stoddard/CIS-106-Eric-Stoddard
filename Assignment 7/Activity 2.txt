@@ -1,0 +1,114 @@
+Module main()
+    // This program will display a users age in their choice of either months, days, hours or seconds.
+    // References: https://en.wikiversity.org/wiki/Programming_Fundamentals/Conditions
+    Declare String choice
+    
+    Set choice = getChoice()
+    If choice == "M" OR choice == "m" Then
+        Call processMonths()
+    Else
+        If choice == "D" OR choice == "d" Then
+            Call processDays()
+        Else
+            If choice == "H" OR choice == "h" Then
+                Call processHours()
+            Else
+                If choice == "S" OR choice == "s" Then
+                    Call processSeconds()
+                Else
+                    Display "You muct enter M for months, D for days, H for hours or S for seconds"
+                End If
+            End If
+        End If
+    End If
+End Module
+
+Function Real calculateDays (Real years)
+    Declare Real days
+    
+    Set days = years * 365
+    
+    Return days
+End Function
+
+Function Real calculateHours (Real years)
+    Declare Real hours
+    
+    Set hours = years * 8760
+    
+    Return hours
+End Function
+
+Function Real calculateMonths (Real years)
+    Declare Real months
+    
+    Set months = years * 12
+    
+    Return months
+End Function
+
+Function Real calculateSeconds (Real years)
+    Declare Real seconds
+    
+    Set seconds = years * 31536000
+    
+    Return seconds
+End Function
+
+Module displayResult (Real years, Real result, String toScale)
+    Display years, " years is equivalent to ", result, toScale
+End Module
+
+Function String getChoice ()
+    Declare String choice
+    
+    Display "Enter M to convert to months, enter D to convert to days, enter H to convert to hours, or enter S to sonvert to seconds" â€¦
+    Input choice
+    
+    Return choice
+End Function
+
+Function Real getYears ()
+    Declare Real years
+    
+    Display "Enter age in years"
+    Input years
+    
+    Return years
+End Function
+
+Module processDays ()
+    Declare Real years
+    Declare Real result
+    
+    Set years = getYears()
+    Set result = calculateDays(years)
+    Call displayResult(years, result, "Days")
+End Module
+
+Module processHours ()
+    Declare Real years
+    Declare Real result
+    
+    Set years = getYears()
+    Set result = calculateHours(years)
+    Call displayResult(years, result, "Hours")
+End Module
+
+Module processMonths ()
+    Declare Real years
+    Declare Real result
+    
+    Set years = getYears()
+    Set result = calculateMonths(years)
+    Call displayResult(years, result, "Months")
+End Module
+
+Module processSeconds ()
+    Declare Real years
+    Declare Real result
+    
+    Set years = getYears()
+    Set result = calculateSeconds(years)
+    Call displayResult(years, result, "Seconds")
+End Module

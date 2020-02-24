@@ -23,3 +23,7 @@ In this assignment I learned how to use functions within a program. For activity
 ## Assignment 6
 
 In this assignment I became much more comfortable using functions within my programs. I was able to code two programs in Python using functions without the help of Flowgorithm or any other resources. It also took me much less time than the programs I created in the previous assignment. Being comfortable using functions will definitly help me moving forward as I intend to use functions in every program I create moving forward. 
+
+## Assignment 7
+
+In this assignment I learned how to use conditional logic in a program. Using flowgorith I was able to complete activity 2 in a if then else structure. Conditional logic seems very useful in programming and I am sure I will use it a lot in the future. I plan on completing my second program this week in Python using Thonny, hopefully without the help of Flowgorithm. 

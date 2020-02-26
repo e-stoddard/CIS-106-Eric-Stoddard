@@ -26,4 +26,4 @@ In this assignment I became much more comfortable using functions within my prog
 
 ## Assignment 7
 
-In this assignment I learned how to use conditional logic in a program. Using flowgorith I was able to complete activity 2 in a if then else structure. Conditional logic seems very useful in programming and I am sure I will use it a lot in the future. I plan on completing my second program this week in Python using Thonny, hopefully without the help of Flowgorithm. 
+In this assignment I learned how to use conditional logic in a program. Using flowgorithm, I was able to complete activity 2 in a if then else structure. Conditional logic seems very useful in programming and I am sure I will use it a lot in the future. I was able to complete activity 3 in Python using Thonny as an IDE. 

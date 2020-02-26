@@ -4,35 +4,37 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="Ryan"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2020-02-24 01:20:49 PM"/>
+        <attribute name="saved" value="2020-02-26 02:03:15 PM"/>
         <attribute name="created" value="UnlhbjtFUklDLVBDOzIwMjAtMDItMjM7MDU6MTM6MTggUE07MjE2Ng=="/>
-        <attribute name="edited" value="UnlhbjtFUklDLVBDOzIwMjAtMDItMjQ7MDE6MjA6NDkgUE07MjsyMjc0"/>
+        <attribute name="edited" value="UnlhbjtFUklDLVBDOzIwMjAtMDItMjY7MDI6MDM6MTUgUE07NDsyMjcz"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="This program will display a users age in their choice of either months, days, hours or seconds. "/>
             <comment text="References: https://en.wikiversity.org/wiki/Programming_Fundamentals/Conditions"/>
+            <declare name="Years" type="Real" array="False" size=""/>
+            <assign variable="Years" expression="GetYears()"/>
             <declare name="Choice" type="String" array="False" size=""/>
             <assign variable="Choice" expression="GetChoice()"/>
             <if expression="Choice = &quot;M&quot; Or Choice = &quot;m&quot;">
                 <then>
-                    <call expression="ProcessMonths()"/>
+                    <call expression="ProcessMonths(Years)"/>
                 </then>
                 <else>
                     <if expression="Choice = &quot;D&quot; Or Choice = &quot;d&quot;">
                         <then>
-                            <call expression="ProcessDays()"/>
+                            <call expression="ProcessDays(Years)"/>
                         </then>
                         <else>
                             <if expression="Choice = &quot;H&quot; Or Choice = &quot;h&quot;">
                                 <then>
-                                    <call expression="ProcessHours()"/>
+                                    <call expression="ProcessHours(Years)"/>
                                 </then>
                                 <else>
                                     <if expression="Choice = &quot;S&quot; Or Choice = &quot;s&quot;">
                                         <then>
-                                            <call expression="ProcessSeconds()"/>
+                                            <call expression="ProcessSeconds(Years)"/>
                                         </then>
                                         <else>
                                             <output expression="&quot;You muct enter M for months, D for days, H for hours or S for seconds&quot;" newline="True"/>
@@ -109,41 +111,41 @@
         </body>
     </function>
     <function name="ProcessDays" type="None" variable="">
-        <parameters/>
+        <parameters>
+            <parameter name="Years" type="Real" array="False"/>
+        </parameters>
         <body>
-            <declare name="Years" type="Real" array="False" size=""/>
             <declare name="Result" type="Real" array="False" size=""/>
-            <assign variable="Years" expression="GetYears()"/>
             <assign variable="Result" expression="CalculateDays(Years)"/>
             <call expression="DisplayResult(Years, Result, &quot;Days&quot;)"/>
         </body>
     </function>
     <function name="ProcessHours" type="None" variable="">
-        <parameters/>
+        <parameters>
+            <parameter name="Years" type="Real" array="False"/>
+        </parameters>
         <body>
-            <declare name="Years" type="Real" array="False" size=""/>
             <declare name="Result" type="Real" array="False" size=""/>
-            <assign variable="Years" expression="GetYears()"/>
             <assign variable="Result" expression="CalculateHours(Years)"/>
             <call expression="DisplayResult(Years, Result, &quot;Hours&quot;)"/>
         </body>
     </function>
     <function name="ProcessMonths" type="None" variable="">
-        <parameters/>
+        <parameters>
+            <parameter name="Years" type="Real" array="False"/>
+        </parameters>
         <body>
-            <declare name="Years" type="Real" array="False" size=""/>
             <declare name="Result" type="Real" array="False" size=""/>
-            <assign variable="Years" expression="GetYears()"/>
             <assign variable="Result" expression="CalculateMonths(Years)"/>
             <call expression="DisplayResult(Years, Result, &quot;Months&quot;)"/>
         </body>
     </function>
     <function name="ProcessSeconds" type="None" variable="">
-        <parameters/>
+        <parameters>
+            <parameter name="Years" type="Real" array="False"/>
+        </parameters>
         <body>
-            <declare name="Years" type="Real" array="False" size=""/>
             <declare name="Result" type="Real" array="False" size=""/>
-            <assign variable="Years" expression="GetYears()"/>
             <assign variable="Result" expression="CalculateSeconds(Years)"/>
             <call expression="DisplayResult(Years, Result, &quot;Seconds&quot;)"/>
         </body>

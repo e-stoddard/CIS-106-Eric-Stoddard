@@ -33,40 +33,37 @@ def getYears():
     
     return years
 
-def processDays():
-    years = getYears()
+def processDays(years):
     result = calculateDays(years)
     displayResult(years, result, "Days")
 
-def processHours():
-    years = getYears()
+def processHours(years):
     result = calculateHours(years)
     displayResult(years, result, "Hours")
 
-def processMonths():
-    years = getYears()
+def processMonths(years):
     result = calculateMonths(years)
     displayResult(years, result, "Months")
 
-def processSeconds():
-    years = getYears()
+def processSeconds(years):
     result = calculateSeconds(years)
     displayResult(years, result, "Seconds")
 
 # Main
 # This program will display a users age in their choice of either months, days, hours or seconds.
 # References: https://en.wikiversity.org/wiki/Programming_Fundamentals/Conditions
+years = getYears()
 choice = getChoice()
 if choice == "M" or choice == "m":
-    processMonths()
+    processMonths(years)
 else:
     if choice == "D" or choice == "d":
-        processDays()
+        processDays(years)
     else:
         if choice == "H" or choice == "h":
-            processHours()
+            processHours(years)
         else:
             if choice == "S" or choice == "s":
-                processSeconds()
+                processSeconds(years)
             else:
                 print("You muct enter M for months, D for days, H for hours or S for seconds")

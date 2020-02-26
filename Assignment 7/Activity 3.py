@@ -20,16 +20,14 @@ def get_miles():
     return miles
 
 
-def process_us():
-    miles = get_miles()
+def process_us(miles):
     yards = miles * 1760
     feet = yards * 3
     inches = feet * 12
     display_result_us(miles, yards, feet, inches)
 
 
-def process_metric():
-    miles = get_miles()
+def process_metric(miles):
     kilometers = miles * 1.609344
     meters = kilometers * 1000
     centimeters = meters * 100
@@ -47,11 +45,12 @@ def display_result_metric(miles, kilometers, meters, centimeters):
 
 
 def main():
+    miles = get_miles()
     choice = get_choice()
     if choice == "U" or choice == "u":
-        process_us()
+        process_us(miles)
     elif choice == "M" or choice == "m":
-        process_metric()
+        process_metric(miles)
     else:
         print("You must enter U for US measurments" +
               "or M for metric measurments")

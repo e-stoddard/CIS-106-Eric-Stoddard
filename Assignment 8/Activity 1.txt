@@ -1,0 +1,26 @@
+Function Main
+    ... This program uses a loop to generate a list of multiplication expressions for a given value.
+    Declare Integer base
+    Declare Integer expressions
+    
+    Assign base = GetValue("base")
+    Assign expressions = GetValue("expressions")
+    Call DoLoop(base, expressions)
+End
+
+Function DoLoop (Integer base, Integer expressions)
+    Declare Integer count
+    
+    Assign count = expressions
+    Loop
+        Output base & " * " & count & " = " & (base * count)
+        Assign count = count - 1
+    Do count > 0
+End
+
+Function GetValue (String name)
+    Declare Integer value
+    
+    Output "Enter " & name & " value"
+    Input value
+Return Integer value

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ryan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-02-29 06:18:48 PM"/>
+        <attribute name="created" value="UnlhbjtFUklDLVBDOzIwMjAtMDItMjk7MDU6MzY6MDYgUE07MjE3NA=="/>
+        <attribute name="edited" value="UnlhbjtFUklDLVBDOzIwMjAtMDItMjk7MDY6MTg6NDggUE07MTsyMjg5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program uses a loop to generate a list of multiplication expressions for a given value."/>
+            <declare name="base" type="Integer" array="False" size=""/>
+            <declare name="expressions" type="Integer" array="False" size=""/>
+            <assign variable="base" expression="GetValue(&quot;base&quot;)"/>
+            <assign variable="expressions" expression="GetValue(&quot;expressions&quot;)"/>
+            <call expression="DoLoop(base, expressions)"/>
+        </body>
+    </function>
+    <function name="GetValue" type="Integer" variable="value">
+        <parameters>
+            <parameter name="name" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter &quot; &amp; name &amp; &quot; value&quot;" newline="True"/>
+            <input variable="value"/>
+        </body>
+    </function>
+    <function name="DoLoop" type="None" variable="">
+        <parameters>
+            <parameter name="base" type="Integer" array="False"/>
+            <parameter name="expressions" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="expressions"/>
+            <do expression="count &gt; 0">
+                <output expression="base &amp; &quot; * &quot; &amp; count &amp; &quot; = &quot; &amp; (base * count)" newline="True"/>
+                <assign variable="count" expression="count - 1"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

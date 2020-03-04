@@ -1,21 +1,23 @@
 Function Main
     ... This program uses a loop to generate a list of multiplication expressions for a given value.
+    ... References: 
+    ... https://en.wikiversity.org/wiki/Programming_Fundamentals/Loops
     Declare Integer base
     Declare Integer expressions
     
     Assign base = GetValue("base")
     Assign expressions = GetValue("expressions")
-    Call DoLoop(base, expressions)
+    Call WhileLoop(base, expressions)
 End
 
-Function DoLoop (Integer base, Integer expressions)
-    Declare Integer count
+Function WhileLoop (Integer base, Integer expressions)
+    Declare Integer multiplier
     
-    Assign count = expressions
-    Loop
-        Output base & " * " & count & " = " & (base * count)
-        Assign count = count - 1
-    Do count > 0
+    Assign multiplier = 1
+    While multiplier <= expressions
+        Output base & " * " & multiplier & " = " & (base * multiplier)
+        Assign multiplier = multiplier + 1
+    End
 End
 
 Function GetValue (String name)

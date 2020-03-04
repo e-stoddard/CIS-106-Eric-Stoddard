@@ -1,0 +1,32 @@
+Function Main
+    ... This program will calculate the average grade from a specified total number of grades. 
+    ... References: 
+    ... https://en.wikiversity.org/wiki/Programming_Fundamentals/Loops
+    Declare Integer quantity
+    
+    Assign quantity = GetQuantity()
+    Call WhileLoop(quantity)
+End
+
+Function GetQuantity
+    Declare Integer quantity
+    
+    Output "Enter the total number of grades"
+    Input quantity
+Return Integer quantity
+
+Function WhileLoop (Integer quantity)
+    Declare Integer counter
+    Declare Integer total
+    Declare Integer grade
+    
+    Assign total = 0
+    Assign counter = 0
+    While counter < quantity
+        Output "Enter grade"
+        Input grade
+        Assign total = total + grade
+        Assign counter = counter + 1
+    End
+    Output "Average grade = " & (total / quantity)
+End

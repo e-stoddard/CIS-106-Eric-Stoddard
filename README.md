@@ -30,4 +30,4 @@ In this assignment I learned how to use conditional logic in a program. Using fl
 
 ## Assignment 8
 
-In this assignment I learned how to use loops in a program. Using Flowgorithm I was able to complete activity 1 using a do loop. Loops seem very useful in programming and I am sure I will use them a lot in the future. I plan on completing the next activity in Python without the help of Flowgorithm. 
+In this assignment I learned how to use loops in a program. Using Flowgorithm I was able to complete activity 1 using a while loop. Loops seem very useful in programming and I am sure I will use them a lot in the future. I decided to use Flowgorithm for the second activity as well because I wanted a little more practice with structuring my program correctly. I will complete another activity in my own time in Python to get extra practice.   

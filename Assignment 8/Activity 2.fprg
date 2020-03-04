@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ryan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-03-04 01:48:27 PM"/>
+        <attribute name="created" value="UnlhbjtFUklDLVBDOzIwMjAtMDMtMDQ7MDE6MTc6MDEgUE07MjE1OA=="/>
+        <attribute name="edited" value="UnlhbjtFUklDLVBDOzIwMjAtMDMtMDQ7MDE6NDg6MjcgUE07MTsyMjc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program will calculate the average grade from a specified total number of grades. "/>
+            <comment text="References:&#13;&#10;https://en.wikiversity.org/wiki/Programming_Fundamentals/Loops"/>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <assign variable="quantity" expression="GetQuantity()"/>
+            <call expression="WhileLoop(quantity)"/>
+        </body>
+    </function>
+    <function name="GetQuantity" type="Integer" variable="quantity">
+        <parameters/>
+        <body>
+            <declare name="quantity" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the total number of grades&quot;" newline="True"/>
+            <input variable="quantity"/>
+        </body>
+    </function>
+    <function name="WhileLoop" type="None" variable="">
+        <parameters>
+            <parameter name="quantity" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="counter" type="Integer" array="False" size=""/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <declare name="grade" type="Integer" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <assign variable="counter" expression="0"/>
+            <while expression="counter &lt; quantity">
+                <output expression="&quot;Enter grade&quot;" newline="True"/>
+                <input variable="grade"/>
+                <assign variable="total" expression="total + grade"/>
+                <assign variable="counter" expression="counter + 1"/>
+            </while>
+            <output expression="&quot;Average grade = &quot; &amp; (total / quantity)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

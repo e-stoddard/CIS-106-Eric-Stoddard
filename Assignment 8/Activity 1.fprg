@@ -4,19 +4,34 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="Ryan"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2020-02-29 06:18:48 PM"/>
+        <attribute name="saved" value="2020-03-04 01:07:03 PM"/>
         <attribute name="created" value="UnlhbjtFUklDLVBDOzIwMjAtMDItMjk7MDU6MzY6MDYgUE07MjE3NA=="/>
-        <attribute name="edited" value="UnlhbjtFUklDLVBDOzIwMjAtMDItMjk7MDY6MTg6NDggUE07MTsyMjg5"/>
+        <attribute name="edited" value="UnlhbjtFUklDLVBDOzIwMjAtMDMtMDQ7MDE6MDc6MDMgUE07NDsyMjcw"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="This program uses a loop to generate a list of multiplication expressions for a given value."/>
+            <comment text="References:&#13;&#10;https://en.wikiversity.org/wiki/Programming_Fundamentals/Loops"/>
             <declare name="base" type="Integer" array="False" size=""/>
             <declare name="expressions" type="Integer" array="False" size=""/>
             <assign variable="base" expression="GetValue(&quot;base&quot;)"/>
             <assign variable="expressions" expression="GetValue(&quot;expressions&quot;)"/>
-            <call expression="DoLoop(base, expressions)"/>
+            <call expression="WhileLoop(base, expressions)"/>
+        </body>
+    </function>
+    <function name="WhileLoop" type="None" variable="">
+        <parameters>
+            <parameter name="base" type="Integer" array="False"/>
+            <parameter name="expressions" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="multiplier" type="Integer" array="False" size=""/>
+            <assign variable="multiplier" expression="1"/>
+            <while expression="multiplier &lt;= expressions">
+                <output expression="base &amp; &quot; * &quot; &amp; multiplier &amp; &quot; = &quot; &amp; (base * multiplier)" newline="True"/>
+                <assign variable="multiplier" expression="multiplier + 1"/>
+            </while>
         </body>
     </function>
     <function name="GetValue" type="Integer" variable="value">
@@ -27,20 +42,6 @@
             <declare name="value" type="Integer" array="False" size=""/>
             <output expression="&quot;Enter &quot; &amp; name &amp; &quot; value&quot;" newline="True"/>
             <input variable="value"/>
-        </body>
-    </function>
-    <function name="DoLoop" type="None" variable="">
-        <parameters>
-            <parameter name="base" type="Integer" array="False"/>
-            <parameter name="expressions" type="Integer" array="False"/>
-        </parameters>
-        <body>
-            <declare name="count" type="Integer" array="False" size=""/>
-            <assign variable="count" expression="expressions"/>
-            <do expression="count &gt; 0">
-                <output expression="base &amp; &quot; * &quot; &amp; count &amp; &quot; = &quot; &amp; (base * count)" newline="True"/>
-                <assign variable="count" expression="count - 1"/>
-            </do>
         </body>
     </function>
 </flowgorithm>

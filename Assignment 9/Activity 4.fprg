@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ryan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-03-08 08:26:54 PM"/>
+        <attribute name="created" value="UnlhbjtFUklDLVBDOzIwMjAtMDItMDk7MDY6MjE6MDkgUE07MjE3MA=="/>
+        <attribute name="edited" value="UnlhbjtFUklDLVBDOzIwMjAtMDMtMDg7MDg6MjY6NTQgUE07ODsyMjky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="This program will calculate someones weekly, monthly and annual pay from an hourly rate and hours worked per week. "/>
+            <comment text="References: &#13;&#10;&#13;&#10;https://en.wikiversity.org/wiki/Programming_Fundamentals/Loops&#13;&#10;&#13;&#10;https://en.wikiversity.org/wiki/Programming_Fundamentals/Functions&#13;&#10;&#13;&#10;https://press.rebus.community/programmingfundamentals/"/>
+            <declare name="hours" type="Real" array="False" size=""/>
+            <declare name="hourlyPay" type="Real" array="False" size=""/>
+            <declare name="weeklyPay" type="Real" array="False" size=""/>
+            <declare name="monthlyPay" type="Real" array="False" size=""/>
+            <declare name="annualPay" type="Real" array="False" size=""/>
+            <declare name="rerun" type="String" array="False" size=""/>
+            <do expression="rerun = &quot;Y&quot; or rerun = &quot;y&quot;">
+                <assign variable="hours" expression="getHours()"/>
+                <assign variable="hourlyPay" expression="getHourlyPay()"/>
+                <assign variable="weeklyPay" expression="calculateWeeklyPay(hours, hourlyPay)"/>
+                <assign variable="annualPay" expression="calculateAnnualPay(weeklyPay)"/>
+                <assign variable="monthlyPay" expression="calculateMonthlyPay(annualPay)"/>
+                <call expression="displayResult(hours, hourlyPay, weeklyPay, monthlyPay, annualPay)"/>
+                <output expression="&quot;To run again enter 'Y', to end enter anything except 'Y'&quot;" newline="True"/>
+                <input variable="rerun"/>
+            </do>
+            <output expression="&quot;Goodbye!&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="calculateAnnualPay" type="Real" variable="annualPay">
+        <parameters>
+            <parameter name="weeklyPay" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="annualPay" type="Real" array="False" size=""/>
+            <assign variable="annualPay" expression="weeklyPay * 52"/>
+        </body>
+    </function>
+    <function name="calculateMonthlyPay" type="Real" variable="monthlyPay">
+        <parameters>
+            <parameter name="annualPay" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="monthlyPay" type="Real" array="False" size=""/>
+            <assign variable="monthlyPay" expression="annualPay / 12"/>
+        </body>
+    </function>
+    <function name="calculateWeeklyPay" type="Real" variable="weeklyPay">
+        <parameters>
+            <parameter name="hours" type="Real" array="False"/>
+            <parameter name="hourlyPay" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="weeklyPay" type="Real" array="False" size=""/>
+            <assign variable="weeklyPay" expression="hours * hourlyPay"/>
+        </body>
+    </function>
+    <function name="displayResult" type="None" variable="">
+        <parameters>
+            <parameter name="hours" type="Real" array="False"/>
+            <parameter name="hourlyPay" type="Real" array="False"/>
+            <parameter name="weeklyPay" type="Real" array="False"/>
+            <parameter name="monthlyPay" type="Real" array="False"/>
+            <parameter name="annualPay" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;By working &quot; &amp; hours &amp; &quot; hours per week at a rate of $&quot; &amp; hourlyPay &amp; &quot; per hour, you will make $&quot; &amp; weeklyPay &amp; &quot; per week, $&quot; &amp; monthlyPay &amp; &quot; per month, and $&quot; &amp; annualPay &amp; &quot; per year&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="getHourlyPay" type="Real" variable="hourlyPay">
+        <parameters/>
+        <body>
+            <declare name="hourlyPay" type="Real" array="False" size=""/>
+            <do expression="hourlyPay &lt;= 0">
+                <output expression="&quot;Enter Hourly pay&quot;" newline="True"/>
+                <input variable="hourlyPay"/>
+            </do>
+        </body>
+    </function>
+    <function name="getHours" type="Real" variable="hours">
+        <parameters/>
+        <body>
+            <declare name="hours" type="Real" array="False" size=""/>
+            <do expression="hours &lt;= 0">
+                <output expression="&quot;Enter hours worked per week&quot;" newline="True"/>
+                <input variable="hours"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

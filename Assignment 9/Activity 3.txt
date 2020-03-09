@@ -1,0 +1,64 @@
+Function Main
+    ... This program will calculate someones weekly, monthly and annual pay from an hourly rate and hours worked per week. 
+    ... References:  
+    ...  
+    ... https://en.wikiversity.org/wiki/Programming_Fundamentals/Loops 
+    ...  
+    ... https://en.wikiversity.org/wiki/Programming_Fundamentals/Functions 
+    ...  
+    ... https://press.rebus.community/programmingfundamentals/
+    Declare Real hours
+    Declare Real hourlyPay
+    Declare Real weeklyPay
+    Declare Real monthlyPay
+    Declare Real annualPay
+    Declare String rerun
+    
+    Loop
+        Assign hours = getHours()
+        Assign hourlyPay = getHourlyPay()
+        Assign weeklyPay = calculateWeeklyPay(hours, hourlyPay)
+        Assign annualPay = calculateAnnualPay(weeklyPay)
+        Assign monthlyPay = calculateMonthlyPay(annualPay)
+        Call displayResult(hours, hourlyPay, weeklyPay, monthlyPay, annualPay)
+        Output "To run again enter 'Y', to end enter anything except 'Y'"
+        Input rerun
+    Do rerun = "Y" or rerun = "y"
+    Output "Goodbye!"
+End
+
+Function calculateAnnualPay (Real weeklyPay)
+    Declare Real annualPay
+    
+    Assign annualPay = weeklyPay * 52
+Return Real annualPay
+
+Function calculateMonthlyPay (Real annualPay)
+    Declare Real monthlyPay
+    
+    Assign monthlyPay = annualPay / 12
+Return Real monthlyPay
+
+Function calculateWeeklyPay (Real hours, Real hourlyPay)
+    Declare Real weeklyPay
+    
+    Assign weeklyPay = hours * hourlyPay
+Return Real weeklyPay
+
+Function displayResult (Real hours, Real hourlyPay, Real weeklyPay, Real monthlyPay, Real annualPay)
+    Output "By working " & hours & " hours per week at a rate of $" & hourlyPay & " per hour, you will make $" & weeklyPay & " per week, $" & monthlyPay & " per month, and $" & annualPay & " per year"
+End
+
+Function getHourlyPay
+    Declare Real hourlyPay
+    
+    Output "Enter Hourly pay"
+    Input hourlyPay
+Return Real hourlyPay
+
+Function getHours
+    Declare Real hours
+    
+    Output "Enter hours worked per week"
+    Input hours
+Return Real hours

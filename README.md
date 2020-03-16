@@ -35,3 +35,8 @@ In this assignment I learned how to use loops in a program. Using Flowgorithm I 
 ## Assignment 9
 
 In this assignment I learned how to use do loops to make a previous program more robust. First, I added a do loop to rerun the program as many times as the user wants before exiting the program. This will be useful in many programs moving forward to prevent the user from having to restart the program every time they want to use it. Second, I added input validation loops to insure the data the user enters makes sense. 
+
+## Assignment 10
+
+In this assignment I learned how to use a for loop in programming. For loops seem to be very useful when the number of iterations is known. I also learned how to create a nested loop. I'm sure I will use nested loops a lot in the future because they can process a lot of computations with only a few lines of code. 
+

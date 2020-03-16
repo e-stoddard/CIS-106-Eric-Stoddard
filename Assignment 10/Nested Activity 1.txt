@@ -1,4 +1,10 @@
 Function Main
+    ... This Program will create a multiplication table from a given range of numbers. 
+    ... References: 
+    ...  
+    ... https://en.wikiversity.org/wiki/Programming_Fundamentals/Loops 
+    ...  
+    ... https://www.youtube.com/watch?v=H7frvcAHXps
     Declare Integer start
     Declare Integer end
     

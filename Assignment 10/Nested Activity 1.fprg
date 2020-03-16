@@ -4,13 +4,15 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="Ryan"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2020-03-15 04:57:02 PM"/>
+        <attribute name="saved" value="2020-03-16 01:51:19 PM"/>
         <attribute name="created" value="UnlhbjtFUklDLVBDOzIwMjAtMDMtMTQ7MDg6MTQ6MDcgUE07MjE2OQ=="/>
-        <attribute name="edited" value="UnlhbjtFUklDLVBDOzIwMjAtMDMtMTU7MDQ6NTc6MDIgUE07NDsyMjc5"/>
+        <attribute name="edited" value="UnlhbjtFUklDLVBDOzIwMjAtMDMtMTY7MDE6NTE6MTkgUE07NTsyMjgw"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
+            <comment text="This Program will create a multiplication table from a given range of numbers. "/>
+            <comment text="References:&#13;&#10;&#13;&#10;https://en.wikiversity.org/wiki/Programming_Fundamentals/Loops&#13;&#10;&#13;&#10;https://www.youtube.com/watch?v=H7frvcAHXps"/>
             <declare name="start" type="Integer" array="False" size=""/>
             <declare name="end" type="Integer" array="False" size=""/>
             <assign variable="start" expression="GetValue(&quot;starting&quot;)"/>

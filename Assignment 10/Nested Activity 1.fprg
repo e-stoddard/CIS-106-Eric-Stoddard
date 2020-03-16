@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ryan"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-03-15 04:57:02 PM"/>
+        <attribute name="created" value="UnlhbjtFUklDLVBDOzIwMjAtMDMtMTQ7MDg6MTQ6MDcgUE07MjE2OQ=="/>
+        <attribute name="edited" value="UnlhbjtFUklDLVBDOzIwMjAtMDMtMTU7MDQ6NTc6MDIgUE07NDsyMjc5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="start" type="Integer" array="False" size=""/>
+            <declare name="end" type="Integer" array="False" size=""/>
+            <assign variable="start" expression="GetValue(&quot;starting&quot;)"/>
+            <assign variable="end" expression="GetValue(&quot;ending&quot;)"/>
+            <call expression="NestedLoop(start, end)"/>
+        </body>
+    </function>
+    <function name="GetValue" type="Integer" variable="value">
+        <parameters>
+            <parameter name="name" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter &quot; &amp; name &amp; &quot; value&quot;" newline="True"/>
+            <input variable="value"/>
+        </body>
+    </function>
+    <function name="NestedLoop" type="None" variable="">
+        <parameters>
+            <parameter name="start" type="Integer" array="False"/>
+            <parameter name="end" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="row" type="Integer" array="False" size=""/>
+            <declare name="column" type="Integer" array="False" size=""/>
+            <for variable="row" start="start" end="end" direction="inc" step="1">
+                <output expression="&quot;     &quot; &amp; row" newline="False"/>
+            </for>
+            <output expression="&quot;   &quot;" newline="True"/>
+            <for variable="column" start="start" end="end" direction="inc" step="1">
+                <output expression="column &amp; &quot;   &quot;" newline="False"/>
+                <for variable="row" start="start" end="end" direction="inc" step="1">
+                    <output expression="row * column &amp; &quot;   &quot;" newline="False"/>
+                </for>
+                <output expression="&quot;   &quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,32 @@
+Function Main
+    Declare Integer start
+    Declare Integer end
+    
+    Assign start = GetValue("starting")
+    Assign end = GetValue("ending")
+    Call NestedLoop(start, end)
+End
+
+Function GetValue (String name)
+    Declare Integer value
+    
+    Output "Enter " & name & " value"
+    Input value
+Return Integer value
+
+Function NestedLoop (Integer start, Integer end)
+    Declare Integer row
+    Declare Integer column
+    
+    For row = start to end
+        Output "     " & row
+    End
+    Output "   "
+    For column = start to end
+        Output column & "   "
+        For row = start to end
+            Output row * column & "   "
+        End
+        Output "   "
+    End
+End

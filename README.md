@@ -40,3 +40,7 @@ In this assignment I learned how to use do loops to make a previous program more
 
 In this assignment I learned how to use a for loop in programming. For loops seem to be very useful when the number of iterations is known. I also learned how to create a nested loop. I'm sure I will use nested loops a lot in the future because they can process a lot of computations with only a few lines of code. 
 
+## Assignment 11
+
+In this assignment I learned how to fixed array (list) in Python. Specifically, I learned how to put a series of inputs into a fixed array and how to call individual members of the array. I also learned how to sort arrays based on value size and how to find the total sum of an array of numbers. 
+

@@ -15,12 +15,12 @@ def WhileLoop(quantity):
     return grades
 
 
-def DisplayHigh(grades, quantity):
-    print("High grade = " + str(grades[quantity - 1]))
+def DisplayLow(grades, quantity):
+    print("Low grade = " + str(grades[quantity - 1]))
 
 
-def DisplayLow(grades):
-    print("Low grade = " + str(grades[0]))
+def DisplayHigh(grades):
+    print("High grade = " + str(grades[0]))
 
 
 def DisplayAverage(grades, quantity):
@@ -29,6 +29,7 @@ def DisplayAverage(grades, quantity):
 
 
 def DisplayGrades(grades):
+    grades.reverse()
     for index in range(len(grades)):
         print("Grade[" + str(index) + "] = " +
               str(grades[index]))
@@ -38,8 +39,8 @@ def main():
     quantity = GetQuantity()
     grades = WhileLoop(quantity)
     DisplayGrades(grades)
-    DisplayHigh(grades, quantity)
-    DisplayLow(grades)
+    DisplayHigh(grades)
+    DisplayLow(grades, quantity)
     DisplayAverage(grades, quantity)
 
 
@@ -48,5 +49,6 @@ def main():
 # References:
 # https://en.wikiversity.org/wiki/Programming_Fundamentals/Loops
 # https://press.rebus.community/programmingfundamentals/
+# https://www.programiz.com/python-programming/methods/list/reverse
 
 main()

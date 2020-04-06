@@ -42,5 +42,9 @@ In this assignment I learned how to use a for loop in programming. For loops see
 
 ## Assignment 11
 
-In this assignment I learned how to fixed array (list) in Python. Specifically, I learned how to put a series of inputs into a fixed array and how to call individual members of the array. I also learned how to sort arrays based on value size and how to find the total sum of an array of numbers. 
+In this assignment I learned how to use fixed arrays (lists) in Python. Specifically, I learned how to put a series of inputs into a fixed array and how to call individual members of the array. I also learned how to sort arrays based on value size and how to find the total sum of an array of numbers. 
+
+## Assignment 12
+
+In this assignment I learned how to use dynamic arrays (lists) in Python. I completed the same activities as last week except I replaced the fixed arrays with dynamic arrays. A dynamic array seems to work better for this activity since it does not require the user to count how many total entries they want to make before entering them. 
 

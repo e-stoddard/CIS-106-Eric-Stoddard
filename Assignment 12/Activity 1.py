@@ -2,7 +2,7 @@ def collect_grades():
     grade_list = []
     counter = 0
     while counter >= 0:
-        print("Enter grade")
+        print("Enter grade score / Enter a negative value when finished")
         grade = int(input())
         if grade >= 0:
             grade_list.append(grade)

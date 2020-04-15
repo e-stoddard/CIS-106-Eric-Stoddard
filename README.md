@@ -48,3 +48,6 @@ In this assignment I learned how to use fixed arrays (lists) in Python. Specific
 
 In this assignment I learned how to use dynamic arrays (lists) in Python. I completed the same activities as last week except I replaced the fixed arrays with dynamic arrays. A dynamic array seems to work better for this activity since it does not require the user to count how many total entries they want to make before entering them. 
 
+## Assignment 13
+
+In this assignment I learned how to handle strings in Python. I was able to split a string into a list by a specified seperator then print each member of the list in the format required by the activity. This seems like a good way to handle date inputed by the user because it allows the user to enter everything at once instead of entering each value individually. 

@@ -18,7 +18,7 @@ def find_first_initial(split_name):
 
 
 def display_name(last_name, first_initial):
-    print(last_name, ",", first_initial, ".")
+    print(last_name + ",", first_initial + ".")
 
 
 # This program will take a first and last name and change

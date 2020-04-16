@@ -1,3 +1,12 @@
+# This program will take a first and last name and change
+# it to the form "last name, first initial."
+# References:
+# https://press.rebus.community/programmingfundamentals/
+# https://en.wikiversity.org/wiki/Programming_Fundamentals/
+# Strings
+# https://www.w3schools.com/python/python_ref_string.asp
+
+
 def get_name():
     print("Enter first and last name")
     full_name = str(input())
@@ -18,16 +27,8 @@ def find_first_initial(split_name):
 
 
 def display_name(last_name, first_initial):
-    print(last_name + ",", first_initial + ".")
+    print(last_name.replace(" ", "") + ",", first_initial + ".")
 
-
-# This program will take a first and last name and change
-# it to the form "last name, first initial."
-# References:
-# https://press.rebus.community/programmingfundamentals/
-# https://en.wikiversity.org/wiki/Programming_Fundamentals/
-# Strings
-# https://www.w3schools.com/python/python_ref_string.asp
 
 def main():
     split_name = get_name()

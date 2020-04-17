@@ -11,23 +11,25 @@ def get_name():
     print("Enter first and last name")
     full_name = str(input())
     split_name = full_name.split(None, 1)
+    print(split_name)
     return split_name
 
 
 def find_last_name(split_name):
-    split_name.sort(reverse=True)
-    last_name = split_name[0]
+    last_name = split_name[1].strip().title()
+    while "  " in last_name:
+        last_name = last_name.replace("  ", " ")
     return last_name
 
 
 def find_first_initial(split_name):
     first_name = split_name[0]
-    first_initial = first_name[0]
+    first_initial = first_name[0].title()
     return first_initial
 
 
 def display_name(last_name, first_initial):
-    print(last_name.replace(" ", "") + ",", first_initial + ".")
+    print(last_name + ",", first_initial + ".")
 
 
 def main():

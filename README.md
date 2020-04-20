@@ -51,3 +51,7 @@ In this assignment I learned how to use dynamic arrays (lists) in Python. I comp
 ## Assignment 13
 
 In this assignment I learned how to handle strings in Python. I was able to split a string into a list by a specified seperator then print each member of the list in the format required by the activity. This seems like a good way to handle date inputed by the user because it allows the user to enter everything at once instead of entering each value individually. 
+
+## Assignment 14
+
+In this assignment I learned how to open a text file in Python. I was able to open the file and store its contents in a list which I was able to manipulate to fit the requirments of activities one and four. Using text files in python seems like an extremely useful way to enter data into a program because it allows the data to be entered and changed without the program needing to be edited. 

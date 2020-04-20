@@ -12,7 +12,7 @@
 
 
 def get_file():
-    scores = open("scores.txt", "r+")
+    scores = open("scores.txt")
     title = scores.readline()
     str = scores.read()
     individual = str.split("\n")
@@ -23,6 +23,7 @@ def get_file():
         names.append(name_score[0])
         grades.append(name_score[1])
     return grades
+    scores.close()
 
 
 def convert_grades(grades):

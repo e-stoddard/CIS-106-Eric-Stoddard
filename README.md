@@ -55,3 +55,7 @@ In this assignment I learned how to handle strings in Python. I was able to spli
 ## Assignment 14
 
 In this assignment I learned how to open a text file in Python. I was able to open the file and store its contents in a list which I was able to manipulate to fit the requirments of activities one and four. Using text files in python seems like an extremely useful way to enter data into a program because it allows the data to be entered and changed without the program needing to be edited. 
+
+## Final Project
+
+In this course I learned a lot about basic computer logic and programming. Going into this course I knew very little about programming but I now feel like have a much better understanding. I learned how to define variables of different data types and to use those variable to create functions. I learned about different types of loops and how to use them both statically and dynamically. I learned how to build arrays and manipulate them with a variaty of array functions. Finaly, I learned about object-oriented programming. This class was a great first step into computer programming and I feel like it gave me a strong foundation for my future education. 
